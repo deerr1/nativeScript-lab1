@@ -1,10 +1,39 @@
-<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
-    
+<Page navigatingTo="onNavigatingTo">
     <ActionBar>
-        <Label text="Home" />
+        <Label text="Калькулятор" />
     </ActionBar>
+    <!-- <ScrollView > -->
+            <DockLayout stretchLastChild="false">
+            <FlexboxLayout flexDirection="column" dock="bottom">
+                <Label text="{{ fullExample }}" textAlignment="right" textWrap="true" class="label"/>
+                <Label text="{{ example }}" textAlignment="right" textWrap="true" class="label"/>
+                <GridLayout columns="*, *, *, *" rows="auto, auto, auto, auto, auto">
+                    <Button text="C" tap=" {{ clear }}" row="0" col="0" class="btn-operation"/>
+                    <Button text="<-" tap="{{ removeLast }}" row="0" col="1" class="btn-operation"/>
+                    <Button text="^" tap="{{ pow }}" row="0" col="2" class="btn-operation"/>
+                    <Button text="÷" tap="{{ divide }}" row="0" col="3" class="btn-operation"/>
+                    
+                    <Button text="7" tap="{{ addNumber }}" row="1" col="0" class="number"/>
+                    <Button text="8" tap="{{ addNumber }}" row="1" col="1" class="number"/>
+                    <Button text="9" tap="{{ addNumber }}" row="1" col="2" class="number"/>
+                    <Button text="×" tap="{{ myltiply }}" row="1" col="3" class="btn-operation"/>
+                    
+                    <Button text="4" tap="{{ addNumber }}" row="2" col="0" class="number"/>
+                    <Button text="5" tap="{{ addNumber }}" row="2" col="1" class="number"/>
+                    <Button text="6" tap="{{ addNumber }}" row="2" col="2" class="number"/>
+                    <Button text="−" tap="{{ minus }}" row="2" col="3" class="btn-operation"/>
 
-    <GridLayout>
-        <!-- Add your page content here -->
-    </GridLayout>
+                    <Button text="1" tap="{{ addNumber }}" row="3" col="0" class="number"/>
+                    <Button text="2" tap="{{ addNumber }}" row="3" col="1" class="number"/>
+                    <Button text="3" tap="{{ addNumber }}" row="3" col="2" class="number"/>
+                    <Button text="+" tap="{{ add }}" row="3" col="3" class="btn-operation"/>
+                    
+                    <Button text="%" tap="{{ percent }}" row="4" col="0" class="btn-operation"/>
+                    <Button text="0" tap="{{ addNumber }}" row="4" col="1" class="number"/>
+                    <Button text="." tap="{{ addDot }}" row="4" col="2" class="number"/>
+                    <Button text="=" tap="{{ equal }}" row="4" col="3" class="btn-operation equals"/>
+                </GridLayout>
+            </FlexboxLayout>
+        </DockLayout>
+        <!-- </ScrollView> -->
 </Page>

@@ -1,0 +1,26 @@
+docklayout {
+    margin: 0, 0, 20, 0;
+}
+
+button {
+    border-radius: 50%;
+}
+
+.label {
+    font-size: 40vw;
+    margin: 5%;
+}
+
+.btn-operation {
+    font-size: 25vw;
+    color: orange;
+}
+
+.number {
+    font-size: 25vw;
+}
+
+.equals {
+    color: white;
+    background-color: orange;
+}
